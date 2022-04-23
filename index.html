@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <main>
+            <div class="card">
+                <div class="infos">
+                    <div class="data">
+                        <img src="images/image-jeremy.png" alt="Foto de Jeremy">
+                        <div class="author">
+                            <span class="for">Report for</span>
+                            <span class="name">Jeremy Robson</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="period">
+                    <span class="type daily">Daily</span>
+                    <span class="type weekly">Weekly</span>
+                    <span class="type monthly">Monthly</span>
+
+                </div>
+            </div>
+        </main>
+
+        <div class="work">
+            <nav>
+                <div class="others-cards cWork"
+                    style="background-image: url(../images/icon-work.svg); --cor: hsl(15, 100%, 70%)">
+                    <div class="card-2">
+                        <div class="tasks">
+                            <span class="task">Work</span>
+                            <img src="images/icon-ellipsis.svg" alt="Imagem de menu 3 pontinhos">
+                        </div>
+
+                        <div class="times">
+                            <span class="hours" id="whours">32hrs</span>
+                            <span class="next" id="wnext">Last Week - 36hrs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="play">
+            <nav>
+                <div class="others-cards cPlay"
+                    style="background-image: url(../images/icon-play.svg); --cor: hsl(195, 74%, 62%)">
+                    <div class="card-2">
+                        <div class="tasks">
+                            <span class="task">Play</span>
+                            <img src="images/icon-ellipsis.svg" alt="Imagem de menu 3 pontinhos">
+                        </div>
+
+                        <div class="times">
+                            <span class="hours" id="phours">10hrs</span>
+                            <span class="next" id="pnext">Last Week - 8hrs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="study">
+            <nav>
+                <div class="others-cards cStudy"
+                    style="background-image: url(../images/icon-study.svg); --cor: hsl(348, 100%, 68%)">
+                    <div class="card-2">
+                        <div class="tasks">
+                            <span class="task">Study</span>
+                            <img src="images/icon-ellipsis.svg" alt="Imagem de menu 3 pontinhos">
+                        </div>
+
+                        <div class="times">
+                            <span class="hours" id="shours">4hrs</span>
+                            <span class="next" id="snext">Last Week - 7hrs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="exercise">
+            <nav>
+                <div class="others-cards cExercise"
+                    style="background-image: url(../images/icon-exercise.svg); --cor: hsl(145, 58%, 55%)">
+                    <div class="card-2">
+                        <div class="tasks">
+                            <span class="task">Exercise</span>
+                            <img src="images/icon-ellipsis.svg" alt="Imagem de menu 3 pontinhos">
+                        </div>
+
+                        <div class="times">
+                            <span class="hours" id="ehours">4hrs</span>
+                            <span class="next" id="enext">Last Week - 5hrs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="social">
+            <nav>
+                <div class="others-cards cSocial"
+                    style="background-image: url(../images/icon-social.svg); --cor: hsl(264, 64%, 52%)">
+                    <div class="card-2">
+                        <div class="tasks">
+                            <span class="task">Social</span>
+                            <img src="images/icon-ellipsis.svg" alt="Imagem de menu 3 pontinhos">
+                        </div>
+
+                        <div class="times">
+                            <span class="hours" id="slhours">5hrs</span>
+                            <span class="next" id="slnext">Last Week - 10hrs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="self">
+            <nav>
+                <div class="others-cards cSelf"
+                    style="background-image: url(../images/icon-self-care.svg); --cor: hsl(43, 84%, 65%)">
+                    <div class="card-2">
+                        <div class="tasks">
+                            <span class="task">Self Care</span>
+                            <img src="images/icon-ellipsis.svg" alt="Imagem de menu 3 pontinhos">
+                        </div>
+
+                        <div class="times">
+                            <span class="hours" id="schours">2hrs</span>
+                            <span class="next" id="scnext">Last Week - 2hrs</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+    </div>
+
+    <div id="switch">
+
+        <div id="darkmode">
+            <i class='bx bx-moon icon'></i>
+            <span>Dark Mode</span>
+        </div>
+        <div id="lightmode">
+            <i class='bx bx-sun icon'></i>
+            <span>Light Mode</span>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+
+</html>

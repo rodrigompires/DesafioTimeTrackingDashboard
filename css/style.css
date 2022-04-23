@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+
+html {
+    --primary-blue: hsl(246, 80%, 60%);
+    --neutral-verydark-blue: hsl(226, 43%, 10%);
+    --neutral-dark-blue: hsl(235, 46%, 20%);
+    --neutral-desatured-blue: hsl(235, 45%, 61%);
+    --neutral-pale-blue: hsl(236, 100%, 87%);
+    --text: #fff;
+    --body-light-mode: rgb(205, 217, 227);
+
+    --modal: rgba(24, 29, 110, 0.9);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--neutral-verydark-blue);
+    display: grid;
+    justify-content: center;
+
+    min-width: 375px;
+    transition: background-color .5s linear;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    width: 15.4rem;
+    transition: all .5s linear;
+}
+
+
+.card {
+    width: 100%;
+    height: 9.5rem;
+    background-color: var(--neutral-dark-blue);
+    border-radius: 1rem;
+}
+
+.card .infos {
+    width: 100%;
+    height: 6.2rem;
+    background-color: var(--primary-blue);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.card .infos .data {
+    display: flex;
+    margin-right: .2rem;
+}
+
+.card .infos img {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.card .infos .author {
+    display: flex;
+    flex-direction: column;
+    margin-left: .7rem;
+}
+
+.card .infos .author .for {
+    font-size: .7rem;
+    margin-top: .5rem;
+    color: var(--neutral-pale-blue);
+}
+
+.card .infos .author .name {
+    margin-top: .1rem;
+    color: var(--neutral-pale-blue);
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+.container .card .period {
+    color: var(--neutral-desatured-blue);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.container .card .period .weekly {
+    color: var(--text);
+}
+
+.container .card .period span {
+    font-size: .8rem;
+    margin-top: 1rem;
+    padding-left: .5rem;
+    cursor: pointer;
+}
+
+.container .card .period span:hover {
+    color: var(--text);
+}
+
+#switch {
+    display: none;
+}
+
+
+
+
+
+
+/* DEMAIS CARDS */
+
+.container .others-cards {
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--cor);
+    border-radius: .7rem;
+
+    background-image: url(../images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: 94% -.3rem;
+    background-size: 3.7rem;
+
+    
+    margin-bottom: 4rem;
+
+}
+
+.work, .play, .study, .exercise, .social, .self {   
+    margin-top: 1rem;
+    height: 8.4rem;
+    
+}
+
+.container .others-cards .card-2 {
+    position: absolute;
+    width: 100%;
+    height: 6.7rem;
+    background-color: var(--neutral-dark-blue);
+    top: 1.7rem;
+    border-radius: .7rem;
+}
+
+.container .others-cards .card-2 .tasks {
+    width: 100%;
+    height: 2rem;
+    color: var(--text);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.container .others-cards .card-2 .tasks .task {
+    width: 8rem;
+    margin-right: 2.2rem;
+    font-size: .8rem;
+    font-weight: 500;
+    display: inline-block;
+
+}
+
+.container .others-cards .card-2 .tasks img {
+    width: 1rem;
+}
+
+.container .others-cards .card-2 .tasks img:hover {
+    filter: contrast(10000%);    
+}
+
+.others-cards .card-2 .times {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -.3rem;
+}
+
+.others-cards .card-2 .times .hours {
+    width: 5rem;
+    font-size: 1.4rem;
+    color: var(--text);
+    font-weight: 100;
+}
+
+.others-cards .card-2 .times .next {
+    font-size: .7rem;
+    width: 6.5rem;
+    color: var(--neutral-pale-blue);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container .others-cards .card-2:hover {
+    background-color: #34397B;
+    cursor: pointer;
+}
+
+
+
+/* MEDIA SCREEN */
+
+@media screen and (min-width: 800px) {
+    .container {
+        display: grid;
+        width: 28rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: .8rem;
+        transition: all .5s linear;
+    }
+
+    main {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .work, .play, .study, .exercise, .social, .self {
+        margin-top: 0;
+    }
+
+    #switch {
+        position: absolute;
+        right: .5rem;
+        top: .2rem;
+        width: 5rem;
+        height: 3rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .bx {
+        color: var(--neutral-pale-blue);
+        font-size: 1.5rem;
+        margin: .5rem;
+        cursor: pointer;
+    }
+
+    #darkmode {
+        display: none
+    }
+
+
+    #darkmode span { 
+        font-size: .5rem;
+        display: block;
+        
+    }
+
+    #lightmode span {
+        font-size: .5rem;
+        display: block;
+        color: var(--text);       
+    }
+
+
+
+    /* LIGHT MODE */
+
+    body.light {
+        background-color: var(--body-light-mode);
+        transition: all .5s linear;
+    }
+
+    body.light .bx-moon {
+        display: block;
+        color: var(--neutral-dark-blue);
+    }
+
+    body.light .bx-sun {
+        display: none;
+    }
+
+    body.light #darkmode {
+        display: block;
+    }
+
+    body.light #lightmode {
+        display: none;      
+    }
+
+    body.light .others-cards {
+        box-shadow: .1rem -.1rem 15px var(--cor);
+    }
+
+    body.light .card .infos {
+        box-shadow: .1rem -.1rem 15px var(--primary-blue);
+    }
+
+}
+
+
+
+@media screen and (min-width: 1000px) {
+    .container {
+        width: 55rem;
+        height: 23rem;
+        margin-top: 50%;
+        transform: translateY(-50%);
+
+
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        transition: all .5s linear;
+
+    }
+
+    .container .others-cards {
+        margin-top: 0;
+        margin-bottom: 0;
+        
+    }
+
+
+    main {
+        width: 13rem;
+        height: 22.6rem;
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        grid-row-start: 1;
+        grid-row-end: 3;          
+    }
+
+    .card {
+        height: 100%;
+    }
+
+    .card .period {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: .9rem;
+    }
+
+    .card .period .weekly {
+        padding: .5rem;
+    }
+
+    .card .infos .data {
+        flex-direction: column;
+        margin-left: 1rem;
+   
+    }
+
+    .card .infos .data .author .name {
+        font-size: 1.8rem;
+        color: var(--text);
+    }
+
+    .card .infos .data img {
+        margin-bottom: 2rem;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .times {
+        width: 100%;
+        flex-direction: column;
+        margin-left: -3rem;  
+        padding-top: 1rem;
+    }
+
+    .others-cards .card-2 .times .hours {   
+    font-size: 2.5rem;
+}
+
+    .card .infos {
+        height: 14rem;
+    }
+
+    .container .others-cards .card-2 {
+        height: 9rem;
+    }
+
+    .container .others-cards .card-2 .tasks .task {
+        margin-left: 1.1rem;
+    }
+
+    .container .others-cards .card-2 .tasks img {
+        margin-right: 1.1rem;
+    }
+
+    .others-cards .card-2 .times .next {
+        justify-content: flex-start;
+        margin-left: 1.6rem;
+    }
+
+}
